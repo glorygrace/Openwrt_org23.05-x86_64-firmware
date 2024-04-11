@@ -112,9 +112,9 @@ jobs:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
         SSH_PASS: ${{ secrets.SSH_PASS }}
 
-    - name: Don't kill instace
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      run: sleep 1h # Prevent to killing instance after failure
+    # - name: Don't kill instace
+    #  if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+    #  run: sleep 1h # Prevent to killing instance after failure
     
     - name: Download package
       id: package
