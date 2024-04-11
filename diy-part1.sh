@@ -20,6 +20,6 @@
 #echo 'src-git kenzo https://github.com/kenzok8/openwrt-packages' >>feeds.conf.default
 #echo 'src-git small https://github.com/kenzok8/small' >>feeds.conf.default
 #echo 'src-git smallpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
-#echo 'src-git kiddin9package https://github.com/kiddin9/openwrt-packages' >>feeds.conf.default
-git clone https://github.com/kiddin9/openwrt-packages
+echo 'src-git kiddin9package https://github.com/kiddin9/openwrt-packages' >>feeds.conf.default
+#git clone https://github.com/kiddin9/openwrt-packages
 #git clone https://github.com/lisaac/luci-app-diskman.git
