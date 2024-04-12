@@ -107,12 +107,10 @@ jobs:
 
     - name: Start SSH via Ngrok
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      # run: curl -sL https://gist.githubusercontent.com/retyui/7115bb6acf151351a143ec8f96a7c561/raw/7099b9db76729dc5761da72aa8525f632d8875c9/debug-github-actions.sh | bash
       uses: luchihoratiu/debug-via-ssh@main
       with:
         NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
         SSH_PASS: ${{ secrets.SSH_PASS }}
-        NGROK_TIMEOUT: 21500
 
     # - name: Don't kill instace
     #  if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
